@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  drunker-config-service:
+    container_name: drunker-config-service
+    image: springboot-app
+    build: ./
+    ports:
+      - "8088:8088"
+    networks:
+      - drunker_network
+
+networks:
+  drunker_network:
+    external: true
+    name: drunker_network
+
+#d0ffe249dec9d746aaca53a91d342dc4b385a77b86373954e8b4f7553e09933f
